@@ -14,10 +14,12 @@ characteristics of Jupiter’s sub-cloud atmosphere and the presently unknown va
 cloud decks. During the 19-th flyby, the MWR observed several Jovian vortices in the mid-latitudes 2. Recent flybys have revealed features of the polar vortices.
 
 Basic Goal
+
 Make plots of the multiband microwave brightness temperature signals observed by Juno/MWR
 Map and identify individual Jovian vortices.
 
-Advanced Goal
+Advanced Goal
+
 Read the numerical simulation results of Jovian vortices.
 Simulate the synthetic MWR antenna temperatures of the Jovian vortices.
 A synthetic MWR antenna temperature is obtained by the integration of point-wise emission model with the MWR’s measurement response function (MRF). 
