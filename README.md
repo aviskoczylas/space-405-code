@@ -1,5 +1,7 @@
 Python code written for the Space 405 project: Microwave Mapping of Jupiter’s Vortices
+
 By Avi Skoczylas and Maddy Deming
+
 Completed with help from Cheng Li and Jiheng Hu
 
 
