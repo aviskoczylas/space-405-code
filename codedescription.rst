@@ -21,25 +21,34 @@ for a group x, x[something] gets you the member corresponding to the member's na
 Now that we have all of our data in the form of lists, we can choose to print any of the lists, group names, members, etc.
 if we want to see information about the datasets from the original file. 
 
+.. figure:: memberdata.png
+    :align: center
+
+    Description of Group and Member Data
+
 We then convert all of the data sets into numpy arrays by simply telling numpy to turn each member of the group into an array.
 
 Now that all of our datasets are in the form of numpy arrays, it will be easy to plot them!
 
 For the 1D time dependent plots, we create a time axis manually based on the number of points in the dataset. 
 We can then use matplot commands to generate, label, etc the plots of latitude and longitude vs time. 
+
 .. figure:: lat v time.png
-    :alt: Plot of latitude vs. time
-    :width: 400
     :align: center
+
+    Plot of latitude vs. time
+
 .. figure:: long v time.png
-    :alt: Plot of longitude vs. time
-    :width: 400
     :align: center
+
+    Plot of longitude vs. time
+
 We can also make a parametric plot which shows us the path the spacecraft took over the surface. 
 If we want, we can use zip to make pairs of times and points to place timesteps on the plot as well.
+
 .. figure:: parametric plot.png
-    :alt: Plot of Juno's path over the surface with timesteps
-    :width: 400
     :align: center
+
+    Plot of Juno's path over the surface with timesteps
 
 2d plot explanations coming soon!
