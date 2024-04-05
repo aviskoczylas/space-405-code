@@ -20,6 +20,22 @@ of these junk values. This is important only if we wish to plot incomplete ellip
 We work around this by using a data type called a mask, which tells functions to ignore certain parts of an array when operating on them. We will 
 define our mask as all latitude and longitude points that are equal to -999.9 (the junk value, and not a valid latitude or longitude).
 
-After we apply the mask, we can proceed with
+After we apply the mask, we can proceed with plotting the data. However, we want to see where these locations actually lie on jupiter's surface,
+so we will add a cylindrical projection of jupiters surface to the plot, and stretch it to make sure it is scaled correctly.
+.. figure:: jup_flippped.png
+    :align: center
 
-will complete this rst file later!
+We want to plot multiple footprints and boresights, but not all of them , so we will slice the array and only take the data from every nth row and column. You can decide
+how much data you want to see by adjusting n, the sampling rate. 
+
+Now, all you need to do is iterate through the arrays after slicing them, and plot all boundary points to see the ellipse footprints.
+In order to plot the boresight, you simply take the average value of the latitude and longitude of each footprint point, and that is
+the latitude and longitude of the boresight. However, this only works if the ellipse is complete, or has 360 boundary points, so you 
+must add an if statement to only calculate boresights for complete ellipses. If you wish to only view complete ellipses, you may put the 
+plot function for the ellipse in that same if statement. Both options are pictured below:
+
+.. figure:: footprints(all).png
+    :align: center
+
+.. figure:: footprints(complete).png
+    :align: center
