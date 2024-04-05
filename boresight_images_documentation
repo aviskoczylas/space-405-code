@@ -1,1 +1,23 @@
+===================================
+boresight_images code documentation
+===================================
 
+Authors: 
+    Avi Skoczylas and Maddy Deming
+
+This document will explain how the code works and what it is doing, step by step.
+
+First, we must import the numpy, h5py, and matplotlib libraries in order to manipulate arrays, use h5 data, plot the data, and manipulate images, respectively. 
+
+Next, we open the file for reading by specifying the filepath. 
+
+Then, we convert the h5 file into numpy arrays (see juno_data_processing_documentation for details)
+In this data file, list s1[0] is the latitude boundaries, list s1[1] is the longitude boundaries, and list s1[0] is the number of boundary points. 
+
+However, there is a problem we have to deal with first: the file stores the value -999.9 when no actual data was measured, and this will mess up our plots unless we get rid
+of these junk values. We work around this by using a data type called a mask, which tells functions to ignore certain parts of an array when operating on them. We will 
+define our mask as all latitude and longitude points that are equal to -999.9 (the junk value, and not a valid latitude or longitude).
+
+After we apply the mask, we can proceed with
+
+will complete this rst file later!
