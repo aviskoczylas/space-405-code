@@ -69,7 +69,6 @@ for i, (x_val,y_val,t_val) in enumerate(zip(x,y,t)):
     plt.text(x_val, y_val, t_val)
 plt.show()
 '''
-#the code explanation file has been updated until here
 
 x1=[]
 y1=[]
