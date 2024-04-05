@@ -15,14 +15,15 @@ Then, we convert the h5 file into numpy arrays (see juno_data_processing_documen
 In this data file, list s1[0] is the latitude boundaries, list s1[1] is the longitude boundaries, and list s1[0] is the number of boundary points. 
 
 However, there is a problem we have to deal with first: the file stores the value -999.9 when no actual data was measured, and this will mess up our plots unless we get rid
-of these junk values. This is important only if we wish to plot incomplete ellipses with incomplete data.
+of these junk values. This is important only if we wish to plot incomplete ellipses (this will become clear later).
 
 We work around this by using a data type called a mask, which tells functions to ignore certain parts of an array when operating on them. We will 
 define our mask as all latitude and longitude points that are equal to -999.9 (the junk value, and not a valid latitude or longitude).
 
 After we apply the mask, we can proceed with plotting the data. However, we want to see where these locations actually lie on jupiter's surface,
 so we will add a cylindrical projection of jupiters surface to the plot, and stretch it to make sure it is scaled correctly.
-.. figure:: jup_flippped.png
+
+.. figure:: jup_flipped.png
     :align: center
 
 We want to plot multiple footprints and boresights, but not all of them , so we will slice the array and only take the data from every nth row and column. You can decide
