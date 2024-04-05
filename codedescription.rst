@@ -33,12 +33,12 @@ Now that all of our datasets are in the form of numpy arrays, it will be easy to
 For the 1D time dependent plots, we create a time axis manually based on the number of points in the dataset. 
 We can then use matplot commands to generate, label, etc the plots of latitude and longitude vs time. 
 
-.. figure:: lat v time.png
+.. figure:: latvtime.png
     :align: center
 
     Plot of latitude vs. time
 
-.. figure:: long v time.png
+.. figure:: longvtime.png
     :align: center
 
     Plot of longitude vs. time
@@ -46,7 +46,7 @@ We can then use matplot commands to generate, label, etc the plots of latitude a
 We can also make a parametric plot which shows us the path the spacecraft took over the surface. 
 If we want, we can use zip to make pairs of times and points to place timesteps on the plot as well.
 
-.. figure:: parametric plot.png
+.. figure:: parametricplot.png
     :align: center
 
     Plot of Juno's path over the surface with timesteps
