@@ -1,6 +1,6 @@
-=====================================
-juno_data_processing code explanation
-=====================================
+=======================================
+juno_data_processing code documentation
+=======================================
 
 Authors: 
     Avi Skoczylas and Maddy Deming
@@ -30,6 +30,8 @@ We then convert all of the data sets into numpy arrays by simply telling numpy t
 
 Now that all of our datasets are in the form of numpy arrays, it will be easy to plot them!
 
+Each individual plot is commented out, so uncomment any particular plot you wish to view.
+
 For the 1D time dependent plots, we create a time axis manually based on the number of points in the dataset. 
 We can then use matplot commands to generate, label, etc the plots of latitude and longitude vs time. 
 
@@ -51,4 +53,29 @@ If we want, we can use zip to make pairs of times and points to place timesteps 
 
     Plot of Juno's path over the surface with timesteps
 
-2d plot explanations coming soon!
+The 2d plots are a bit more complex. We want to plot temperature and local zenith angle as a function of longitude and latitude, but they are not given to us in that form. Rather, we are given the information in an arbitrary array, and we are given the longitudes and latitudes that correspond to each point on the array. 
+
+We can "decode" this information by making 4 lists. one for angle, one for temperature, one for the corresponding latitude, one for the corresponding longitude. By iterating over the arbitrary arrays and assigning the corresponding data point in each to the end of the list, we can relate the data to each other without having to refer to the arbitrary array! 
+Essentially, we have gone from 
+
+Local Zenith Angle → Arbitrary Number, Arbitrary Number → Actual Location
+
+to
+
+Local Zenith Angle → Actual Location
+
+Now, it is easy to make scatter plots that show the measured Local Zenith Angle at each location:
+
+.. figure:: longvtime.png
+    :align: center
+
+    Plot of Local Zenith Angle over Jupiter's Surface
+
+And the same goes for temperature plots:
+
+.. figure:: longvtime.png
+    :align: center
+
+    Plot of Channel 6 Temperature over Jupiter's Surface
+
+
